@@ -105,6 +105,7 @@ header{
     align-items: center; /* Center vertically */
     grid-column: 2; /* Ensure it stays in the middle column */
     overflow: hidden; /* Optional: Hide any overflow */
+    display: flex;
 }
 
 .image_carousel {
@@ -140,6 +141,24 @@ button img{
     padding-bottom: 0px;
 
 }
+.hidden_text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: none;
+}
+.image_slide:hover .hidden_text {
+    opacity: 1;
+    display: block;
+    grid-row: 1/2;
+}
+.image_carousel{
+    grid-row: 1/2;
+}
+.image_slide{
+    min-width: 100%;  /* Each slide takes full space */
+    flex-shrink: 1
+}
+ 
 .buttons {
     background-color: var(--color-secondary);
     border: none; /* Removes the border */
@@ -354,6 +373,7 @@ a {
 
     
 }
+}
 @media screen and (max-width: 300px) {
     .header_h2{
         font-size: 10px;
@@ -368,3 +388,4 @@ a {
     }
     
 }
+
