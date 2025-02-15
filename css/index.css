@@ -43,6 +43,9 @@ body{
     min-width: 300px;
         
 }
+nav hidden{
+    display: none;
+}
 header{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -51,14 +54,15 @@ nav{
     grid-column: 1/2;
     grid-row: 2/3;
     text-align: left;
-    background-color: var(--color-accent);
     z-index: 100;
     padding-bottom: 50px;
 }
+
 .menu{
     list-style: none;
     grid-column: 1/2;
     margin-bottom: 10px;
+    background-color: var(--color-accent);
     grid-row: 2/3;
     text-align: left;
     padding-left: 20px;
@@ -67,16 +71,29 @@ nav{
     
     
 }
+
 nav ul li a{
     color: var(--color-secondary) !important;
 }
 .menu li{
     padding-bottom: 15px;
 }
+.hidden {
+    display: none;
+}
+.hamburger_menu{
+    background: none; /* Removes the background */
+  border: none; /* Removes the border */
+  outline: none;
+  cursor: hand;
+  margin-left: 0px;
+  margin-right: 200px;
+
+}
 .hamburger{
-    width: 15%;
+    width: 50%;
     grid-column: 1/2;
-    margin: 10px;
+    margin: 5px;
     grid-row: 1;
 }
 .allison_logo{
@@ -88,9 +105,7 @@ nav ul li a{
     margin-right: auto;
     margin-left: auto;
 }
-.hidden{
-    display: none;
-}
+
 .box_outline{
     border: 1px solid var(--color-primary);
     width: 100%;
@@ -120,6 +135,9 @@ nav ul li a{
     grid-template-columns: 0.5fr 1fr 0.5fr;
     margin: 0 auto; /* Center the carousel container itself */
 }
+.hidden {
+    display: none;
+}
 
 .image_container {
     display: flex;
@@ -134,7 +152,7 @@ nav ul li a{
     display: block;
     max-height: 500px; /* Adjust this based on your design */
 }
-#arrow_left, .arrow_right{
+#arrow_left, #arrow_right{
   background: none; /* Removes the background */
   border: none; /* Removes the border */
   outline: none;
