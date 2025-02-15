@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allison's Portfolio</title>
     <link rel="stylesheet" href="css/index.css">
-    <sript src="javascript/main.js"></sript>
+    
 </head>
 <body>
+    
     <header>
         <img class="hamburger" id="hamburger_id" src="images/align-justify-svgrepo-com.svg" alt="">
-        <nav>
+        <nav class="hidden">
             <ul class="menu">
                 <li><a href="photo.html">Photography</a></li>
                 <li><a href="website.html">Websites</a></li>
@@ -27,34 +28,9 @@
     </header>
     <main> 
         <section class="carousel">
-            <button class="arrow_left"><img src="images/pointer-left-svgrepo-com.svg" alt="left arrow"></button>
+            <button id="arrow_left"><img src="images/pointer-left-svgrepo-com.svg" alt="left arrow"></button>
             <div class="image_container">
-                <div class= "image_slide"> 
-                    <img class="image_carousel" src="images/littlewoman/poster.JPG" alt="little_woman_poster">
-                    <div class="hidden_text">1/20</div>
-                    <p class="hidden_text">Little Woman super long thing I need to write</p>
-                </div>
-                <div class= "image_slide"> 
-                    <img class="image_carousel" src="images/littlewoman/poster.JPG" alt="little_woman_poster">
-                    <div class="hidden_text">1/20</div>
-                    <p class="hidden_text">Little Woman super long thing I need to write</p>
-                </div><div class= "image_slide"> 
-                    <img class="image_carousel" src="images/littlewoman/poster.JPG" alt="little_woman_poster">
-                    <div class="hidden_text">1/20</div>
-                    <p class="hidden_text">Little Woman super long thing I need to write</p>
-                </div><div class= "image_slide"> 
-                    <img class="image_carousel" src="images/littlewoman/poster.JPG" alt="little_woman_poster">
-                    <div class="hidden_text">1/20</div>
-                    <p class="hidden_text">Little Woman super long thing I need to write</p>
-                </div><div class= "image_slide"> 
-                    <img class="image_carousel" src="images/littlewoman/poster.JPG" alt="little_woman_poster">
-                    <div class="hidden_text">1/20</div>
-                    <p class="hidden_text">Little Woman super long thing I need to write</p>
-                </div><div class= "image_slide"> 
-                    <img class="image_carousel" src="images/littlewoman/poster.JPG" alt="little_woman_poster">
-                    <div class="hidden_text">1/20</div>
-                    <p class="hidden_text">Little Woman super long thing I need to write</p>
-                </div>
+                <div class= "image_slide"> </div>
             </div>
             <button class="arrow_right"><img src="images/pointer-right-svgrepo-com (1).svg" alt="right arrow"></button>
         </section>
@@ -90,6 +66,6 @@
         <a href="#"><img src="images/174857.png" alt="Linkedin">Linkedin</a>
     </div>
     </footer>
-    
+    <script src="javascript/main.js"></script>
 </body>
 </html>

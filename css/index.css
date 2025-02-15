@@ -47,10 +47,31 @@ header{
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
+nav{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: left;
+    background-color: var(--color-accent);
+    z-index: 100;
+    padding-bottom: 50px;
+}
 .menu{
-    display: none;
+    list-style: none;
+    grid-column: 1/2;
+    margin-bottom: 10px;
+    grid-row: 2/3;
+    text-align: left;
+    padding-left: 20px;
+    color: var(--color-secondary) !important;
+    text-transform: uppercase;
     
-
+    
+}
+nav ul li a{
+    color: var(--color-secondary) !important;
+}
+.menu li{
+    padding-bottom: 15px;
 }
 .hamburger{
     width: 15%;
@@ -67,7 +88,9 @@ header{
     margin-right: auto;
     margin-left: auto;
 }
-
+.hidden{
+    display: none;
+}
 .box_outline{
     border: 1px solid var(--color-primary);
     width: 100%;
@@ -95,24 +118,23 @@ header{
     padding-right: 5%;
     padding-top: 10px;
     grid-template-columns: 0.5fr 1fr 0.5fr;
-    max-width: 1000px;
     margin: 0 auto; /* Center the carousel container itself */
 }
 
 .image_container {
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    grid-column: 2; /* Ensure it stays in the middle column */
-    overflow: hidden; /* Optional: Hide any overflow */
     display: flex;
+    transition: transform 0.30s ease-in-out;
+    overflow: hidden;
 }
 
 .image_carousel {
-    max-width: 100%; /* Prevent the image from exceeding the container's width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Ensures images fit their container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Prevents distortion */
+    display: block;
+    max-height: 500px; /* Adjust this based on your design */
 }
-.arrow_left, .arrow_right{
+#arrow_left, .arrow_right{
   background: none; /* Removes the background */
   border: none; /* Removes the border */
   outline: none;
@@ -142,21 +164,37 @@ button img{
 
 }
 .hidden_text {
+    position: absolute;
+    bottom: 10px; /* Adjust position on the image */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    background: var(--color-primary); /* Semi-transparent black background */
+    color: var(--color-secondary); /* Text color */
+    padding: 30px 13px;
+    font-size: 16px;
+    text-align: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    display: none;
+    transition: opacity 0.1s ease-in-out;
+
 }
 .image_slide:hover .hidden_text {
     opacity: 1;
+
+
+}
+.image_carousel {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     display: block;
-    grid-row: 1/2;
 }
-.image_carousel{
-    grid-row: 1/2;
-}
-.image_slide{
-    min-width: 100%;  /* Each slide takes full space */
-    flex-shrink: 1
+.image_slide {
+    position: relative; /* Make this the reference for absolute positioning */
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
  
 .buttons {
