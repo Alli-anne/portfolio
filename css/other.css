@@ -7,10 +7,7 @@
     margin-right: auto;
     margin-left: auto;
 }
-#hamburger_id{
-    width:100%;
-    height: 100%;
-}
+
 .box_outline_photo{
     border: 1px solid var(--color-primary);
     width: 53%;
@@ -105,4 +102,69 @@
 .sport{
     width:50%;
     margin: 2%;
+}
+.top_photos{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 5%;
+    gap: 5%;
+
+}
+.top_photo, .headshots{
+    margin: 0 auto;
+    width:100%;
+    
+}
+#kam_melea{
+    grid-column: 1/3;
+    align-items: center;
+}
+.under_images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    padding-top: 3%;
+    gap: 5%;
+    width: 100%;
+
+    
+}
+.headshots{
+    width: 100%;
+   height: 100%;
+    display:none;
+    padding-bottom: 10%;}
+
+.travel_photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 5%;
+    gap: 5%;
+}
+.travel{
+    width: 100%;
+    display:none;
+    
+}
+.event_photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    gap: 5%;
+}
+.performace{
+    display:none;
+}
+.event{
+    width: 100%;
+    display:none;
 }

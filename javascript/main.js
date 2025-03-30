@@ -77,3 +77,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("hello");
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    if (backToTopButton) {
+        // Show/hide the button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) { // Show after scrolling down 300px
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Scroll to top when button is clicked
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+// Function to check if an element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+        rect.bottom >= 0
+    );
+}
+
+// Function to handle scroll animations
+function handleScrollAnimations() {
+    const fadeElements = document.querySelectorAll('.animate-fade');
+    const slideElements = document.querySelectorAll('.animate-slide');
+    
+    // Handle fade animations
+    fadeElements.forEach(element => {
+        if (isInViewport(element) && !element.classList.contains('animated')) {
+            element.classList.add('animated', 'fade');
+        }
+    });
+    
+    // Handle slide animations
+    slideElements.forEach(element => {
+        if (isInViewport(element) && !element.classList.contains('animated')) {
+            element.classList.add('animated', 'slide');
+        }
+    });
+}
+
+// Listen for scroll events
+window.addEventListener('scroll', handleScrollAnimations);
+
+// Initial check on page load
+document.addEventListener('DOMContentLoaded', handleScrollAnimations);

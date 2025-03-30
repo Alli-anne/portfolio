@@ -171,6 +171,9 @@ button img{
     margin: 0px;
     
 }
+.size{
+    width:50%;
+}
 .different_button{
     background-color: var(--color-primary);
     margin-top: 3%;
@@ -443,5 +446,86 @@ a {
         font-size: 5px;
     }
     
+}
+
+/* Add these styles to your CSS */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    background-color: var(--color-accent-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.menu {
+    list-style: none;
+    grid-column: 1/2;
+    margin-bottom: 10px;
+    background-color: var(--color-accent);
+    grid-row: 2/3;
+    text-align: left;
+    padding-left: 20px;
+    color: var(--color-secondary) !important;
+    text-transform: uppercase;
+    padding: 10px 20px; /* Consistent padding */
+}
+
+.menu li {
+    padding-bottom: 15px;
+    /* Add these new properties */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu li a {
+    color: var(--color-secondary) !important;
+    /* Add these new properties */
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px; /* Consistent font size */
+}
+
+
+
+/* Make sure anchor tags inside buttons take full size */
+
+@media screen and (max-width: 600px) {
+    .different_button {
+        flex-direction: column;
+        align-items: center; /* Center buttons */
+    }
+
+    .buttons {
+        width: 80%; /* Percentage width for small screens */
+        min-width: 0; /* Allow narrower width on mobile */
+        margin: 10px auto; /* Simplified margin */
+    }
 }
 
